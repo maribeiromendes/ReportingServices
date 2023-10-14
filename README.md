@@ -31,6 +31,9 @@ Run *docker-compose up --build* and it will create your container.
 Other sources:
 
 [AdventureWorks database and how to restore it with T-SQL](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=tsql)
+
 [Download SQL Server Management Studio](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
+
 [The web portal of a report server (SSRS Native Mode)](https://learn.microsoft.com/en-us/sql/reporting-services/web-portal-ssrs-native-mode?view=sql-server-ver16)
+
 [Integrating Reporting Services Using URL Access - Web Application](https://learn.microsoft.com/en-us/sql/reporting-services/application-integration/integrating-reporting-services-using-url-access-web-application?view=sql-server-ver16)
