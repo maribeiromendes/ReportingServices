@@ -1,0 +1,40 @@
+version: '3.9'
+services:
+    web:
+        container_name: reporting-services
+        build: 
+            context: .
+            dockerfile: ./Zcelero.ReportingServices/Dockerfile
+        ports:
+            - 5136:80
+            # - 7057:443
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Production
+            - "ASPNETCORE_URLS=http://+"
+        volumes:
+            - ~/.aspnet/https:/https:ro
+        depends_on:
+            - sql-server
+
+    mssqldata:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        container_name: scripting
+        entrypoint: /bin/bash
+
+    sql-server:
+        user: root
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        container_name: adventure-works
+        ports:
+            - "1433:1433"
+        volumes:
+            - /var/opt/mssql
+            - ./:/usr/src/app 
+        working_dir: /usr/src/app 
+        command: sh -c ' chmod 777 ./entrypoint.sh; ./entrypoint.sh & /opt/mssql/bin/sqlservr;'
+        environment:
+            SA_PASSWORD: "fakePassw0rd"
+            ACCEPT_EULA: "Y"
+            MSSQL_PID: Developer
+        volumes_from:
+            - mssqldata

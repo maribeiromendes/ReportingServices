@@ -1,0 +1,16 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+   <h1 class="display-4">Report Visualizer</h1>
+   <p>Total Sales For Each Product By Category</p>
+   <FORM id="frmRender" action="http://localhost/ReportServer?/TotalSalesForEachProductByCategory" method="post" target="_self">  
+    <INPUT type="hidden" name="rs:Command" value="Render">   
+    <INPUT type="hidden" name="rc:LinkTarget" value="main">  
+    <INPUT type="hidden" name="rs:Format" value="HTML4.0">  
+    <INPUT type="submit" value="Render Report">  
+   </FORM>  
+</div>
