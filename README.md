@@ -10,6 +10,8 @@ We also have on this project:
 - a .bak file that will be used to import some data to our database.
 - a .rdl file on the folder Reports that can be used to be imported on the Report Server after its configuration.
 
+Please, download the .bak file through this link https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2022.bak and add it to the root folder.
+
 ##Important files
 **docker-compose.yml**: this file is used to create a container containing our SQL Server and application. 
 
