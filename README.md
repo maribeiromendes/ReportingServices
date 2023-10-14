@@ -12,16 +12,16 @@ We also have on this project:
 
 Please, download the .bak file through this link https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2022.bak and add it to the root folder.
 
-##Important files
+## Important files
 **docker-compose.yml**: this file is used to create a container containing our SQL Server and application. 
 
 **entrypoint.sh**: this file is used to copy our .bak file to the container and run the .sql file that imports its content. 
 
 **setup.sql**: this file has the SQL code to import our database
 
-##How to execute this project
+## How to execute this project
 
-###[Docker](https://docs.docker.com/desktop/install/windows-install/)
+### [Docker](https://docs.docker.com/desktop/install/windows-install/)
 You need to have docker installed on your machine.
 
 Run *docker-compose up --build* and it will create your container.
